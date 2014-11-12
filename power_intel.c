@@ -288,7 +288,7 @@ static void intel_power_hint(struct power_module *module, power_hint_t hint,
                 }
             }
             if (intel->vsync_boost) {
-                if (((int)data != 0) && (vsync_count > 0)) {
+                if (((unsigned long)data != 0) && (vsync_count > 0)) {
                     sysfs_write(TOUCHBOOST_PULSE_SYSFS,"1");
                     vsync_count-- ;
                 if (vsync_count == 0)
