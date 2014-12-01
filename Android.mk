@@ -20,26 +20,6 @@ LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE := power.$(TARGET_DEVICE)
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_SRC_FILES := power_intel.c
-
-ifeq ($(POWERHAL_CLV), true)
-    LOCAL_CFLAGS += -DPOWERHAL_CLV
-endif
-ifeq ($(POWERHAL_MFLD), true)
-    LOCAL_CFLAGS += -DPOWERHAL_MFLD
-endif
-ifeq ($(POWERHAL_GI), true)
-    LOCAL_CFLAGS += -DPOWERHAL_GI
-endif
-ifeq ($(POWERHAL_MRFLD), true)
-    LOCAL_CFLAGS += -DPOWERHAL_MRFLD
-endif
-ifeq ($(POWERHAL_BYT), true)
-    LOCAL_CFLAGS += -DPOWERHAL_BYT
-endif
-ifeq ($(POWERHAL_CHT), true)
-    LOCAL_CFLAGS += -DPOWERHAL_CHT
-endif
-
 LOCAL_SHARED_LIBRARIES := liblog
 LOCAL_MODULE_TAGS := optional
 
