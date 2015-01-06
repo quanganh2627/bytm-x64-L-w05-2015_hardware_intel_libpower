@@ -36,6 +36,10 @@ LOCAL_MODULE_TAGS := optional
 
 LOCAL_MODULE_OWNER := intel
 
+ifeq ($(POWERHAL_CHT), true)
+   LOCAL_CFLAGS += -DPOWERHAL_CHT
+endif
+
 include $(BUILD_SHARED_LIBRARY)
 
 include $(call first-makefiles-under,$(LOCAL_PATH))
